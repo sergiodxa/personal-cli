@@ -1,0 +1,24 @@
+{
+  "name": "personal-cli",
+  "description": "A CLI tool with commands for personal usage.",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "bin": ".bin/cli",
+  "author": "Sergio Daniel Xalambrí <hello@sergiodxa.com> (https://sergiodxa.com/)",
+  "license": "MIT",
+  "scripts": {
+    "start": "node .",
+    "build": "pkg src/index.js --output ./.bin/cli --targets latest-macos"
+  },
+  "dependencies": {
+    "chalk": "2.4.1",
+    "meow": "5.0.0",
+    "metascraper": "4.3.2",
+    "metascraper-title": "4.3.2",
+    "mkdirp": "0.5.1",
+    "node-fetch": "2.2.0"
+  },
+  "devDependencies": {
+    "pkg": "4.3.4"
+  }
+}
