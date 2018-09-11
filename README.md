@@ -34,6 +34,7 @@ cli short https://sergiodxa.com /home
 ```
 
 > **Note**: The `/` at the beginning of the path is optional.
+
 > **Note**: The protocol is optional and will default to `https://`.
 
 ### `cli share <url> <comment>`
