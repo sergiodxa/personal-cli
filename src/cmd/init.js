@@ -117,6 +117,7 @@ async function main(name, type) {
       pkg.scripts.dev = "micro-dev";
       pkg.scripts.start = "micro";
       pkg.dependencies.micro = await latestVersion("micro");
+      pkg.dependencies['now-env'] = await latestVersion("now-env");
       pkg.devDependencies['micro-dev'] = await latestVersion("micro-dev");
       break;
     }
