@@ -135,7 +135,7 @@ async function main(name, type) {
   await writeFile(resolve(fullPath, ".gitignore"), gitIgnore(), "utf8");
 
   log("Creating README.md");
-  await writeFile(resolve(fullPath, "README.md"), `# ${name}`, "utf8");
+  await writeFile(resolve(fullPath, "README.md"), `# ${name}\n\n`, "utf8");
 
   log("Creating LICENSE");
   await writeFile(resolve(fullPath, "LICENSE"), license, "utf8");
