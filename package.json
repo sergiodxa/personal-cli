@@ -1,5 +1,5 @@
 {
-  "name": "personal-cli",
+  "name": "@sergiodxa/cli",
   "description": "A CLI tool with commands for personal usage.",
   "version": "1.0.0",
   "main": "src/index.js",
