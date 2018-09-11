@@ -8,11 +8,19 @@ const cli = meow(
   `
   ${chalk.white("Usage")}
     $ ${chalk.cyan("essay <path> '<title>'")}
+    $ ${chalk.cyan("init <name> [type]")}
     $ ${chalk.cyan("share <url> '<comment>'")}
     $ ${chalk.cyan("short <url> <path>")}
 
   ${chalk.white("Aliases")}
-    ${chalk.cyan("blog")} is alias of ${chalk.cyan("essay")}
+    $ ${chalk.cyan("blog <path> '<title>'")}
+      Is alias of ${chalk.cyan("essay")}
+  
+  ${chalk.white("Init Types")}
+    • ${chalk.cyan("none")} (default)
+    • ${chalk.cyan("next")}
+    • ${chalk.cyan("micro")}
+    • ${chalk.cyan("next-static")}
 `,
   {
     description: chalk.cyan("[cli] ") + chalk.white(pkg.description),
@@ -31,6 +39,8 @@ switch (command) {
   case "essay":
   case "blog":
     return require("./cmd/essay.js")(...options, cli.flags);
+  case "init":
+    return require("./cmd/init.js")(...options);
   case "short":
     return require("./cmd/short.js")(...options);
   case "share":

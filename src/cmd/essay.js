@@ -69,7 +69,7 @@ async function main(path, title, { layout } = {}) {
     `New essay file ${path} generated for the essay ${title}, time to write!`
   );
 
-  log("Opening new file on local IDE");
+  log("Opening new file on VSCode");
   exec(`code ${resolve(path)}.mdx`);
 }
 

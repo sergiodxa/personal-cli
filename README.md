@@ -24,6 +24,24 @@ Create a new essay entry on the specified `path` with the given `title`.
 
 Optionally is possible to customize the layout to use with `--layout <name>` which by default is `essay`.
 
+### `cli init <name> [type]`
+
+Initialize a new project with the given name. This will:
+
+- Create a directory with the given name inside `~/Project`
+- Initialize Git inside that directory
+- Initialize Yarn with default inside it
+- Add `start`, `build` and `dev` scripts to package.json based on the type of project
+- If type is defined create now.json and Dockerfile
+- Lastly open VSCode inside the new project
+
+The argument `type` is optional and defaults to none. Possible values are:
+
+- `none`
+- `next`
+- `micro`
+- `next-static`
+
 ### `cli short <url> <path>`
 
 Add a new short URL to [sergiodxa/personal-shortening](https://github.com/sergiodxa/personal-shortening).
