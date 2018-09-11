@@ -51,7 +51,10 @@ const dockerIgnore = {
 !pages
 !package.json
 !yarn.lock`,
-  "next-static": dockerIgnore.next,
+  "next-static": `*
+!pages
+!package.json
+!yarn.lock`,
   micro: `*
 !src
 !package.json
@@ -93,7 +96,17 @@ const nowConfig = name => ({
     null,
     2
   ),
-  micro: nowConfig.next,
+  micro: JSON.stringify(
+    {
+      name,
+      type: "docker",
+      features: {
+        cloud: "v2"
+      }
+    },
+    null,
+    2
+  ),
   "next-static": JSON.stringify(
     {
       name,
@@ -194,7 +207,9 @@ async function main(name, type) {
     log(`Creating Dockerfile and .dockerignore for ${type}`);
     await writeFile(resolve(fullPath, "Dockerfile"), dockerFile[type], "utf8");
     await writeFile(
-      resolve(fullPath, ".dockerignore", dockerIgnore[type], "utf8")
+      resolve(fullPath, ".dockerignore"),
+      dockerIgnore[type],
+      "utf8"
     );
   }
 
