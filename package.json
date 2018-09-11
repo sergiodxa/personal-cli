@@ -1,7 +1,7 @@
 {
   "name": "personal-cli",
   "description": "A CLI tool with commands for personal usage.",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "src/index.js",
   "bin": ".bin/cli",
   "author": "Sergio Daniel Xalambrí <hello@sergiodxa.com> (https://sergiodxa.com/)",
