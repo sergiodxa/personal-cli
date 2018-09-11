@@ -106,7 +106,7 @@ async function main(name, type) {
       pkg.scripts.dev = "next";
       pkg.scripts.build = "next build";
       pkg.scripts.start = "next start";
-      pkg.main = null;
+      delete pkg.main
       pkg.dependencies.next = await latestVersion("next");
       pkg.dependencies.react = await latestVersion("react");
       pkg.dependencies['react-dom'] = await latestVersion("react-dom");
@@ -125,7 +125,7 @@ async function main(name, type) {
       pkg.scripts.dev = "next";
       pkg.scripts.build = "next build";
       pkg.scripts.export = "next export";
-      pkg.main = null;
+      delete pkg.main
       pkg.dependencies.next = await latestVersion("next");
       pkg.dependencies.react = await latestVersion("react");
       pkg.dependencies['react-dom'] = await latestVersion("react-dom");
