@@ -11,6 +11,7 @@ const cli = meow(
     $ ${chalk.cyan("init <name> [type]")}
     $ ${chalk.cyan("share <url> '<comment>'")}
     $ ${chalk.cyan("short <url> <path>")}
+    $ ${chalk.cyan("slide <url> [title]")}
 
   ${chalk.white("Aliases")}
     $ ${chalk.cyan("blog <path> '<title>'")}
@@ -45,6 +46,8 @@ switch (command) {
     return require("./cmd/short.js")(...options);
   case "share":
     return require("./cmd/share.js")(...options);
+  case "slide":
+    return require("./cmd/slide.js")(...options);
   default: {
     if (command) {
       log(`The command ${command} is invalid`);

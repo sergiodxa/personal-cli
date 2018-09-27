@@ -65,3 +65,16 @@ cli share https://sergiodxa.com 'This a super interesting link!'
 ```
 
 > **Note**: The protocol is optional and will default to `https://`.
+
+### `cli slide <url> [title]
+
+Initialize a new slidedeck with the defined URL and title.
+
+***Example***:
+```bash
+cli slide micro-frontends 'Micro Frontend con React & Next.js'
+```
+
+> **Note**: In the case the title is provided the first slide (index.js) will also be generated using an H1 with the title.
+
+> **Note**: All slides automatically have a generic _about_ slide.
