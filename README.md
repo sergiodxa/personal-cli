@@ -1,4 +1,4 @@
-# personal-cli
+# Personal CLI
 
 A CLI tool with commands for personal usage.
 
@@ -37,7 +37,7 @@ Initialize a new project with the given name. This will:
 
 The argument `type` is optional and defaults to none. Possible values are:
 
-- `none`
+- `none` (_default_)
 - `next`
 - `micro`
 - `next-static`
@@ -66,7 +66,7 @@ cli share https://sergiodxa.com 'This a super interesting link!'
 
 > **Note**: The protocol is optional and will default to `https://`.
 
-### `cli slide <url> [title]
+### `cli slide <url> [title]`
 
 Initialize a new slidedeck with the defined URL and title.
 
